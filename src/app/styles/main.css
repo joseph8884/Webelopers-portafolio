@@ -53,12 +53,75 @@ nav button{
 }
 
 header {
-  background-color: brown;
-  height: 100vh;
-  display: grid;
-  place-content: center;
+  width: auto;
+  margin: 0 auto;
+  height: 961px;
 }
 
+.somosWebelopers {
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  max-width: 241px;
+}
+.webelopers{
+  font-size: 32px;
+  font-weight: bold;
+  color: #9f7aea;
+  line-height: 32px;
+}
+.fondoheader {
+  position: absolute;
+  height: 752px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  top: 233px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+header .oracion{
+  display: flex;
+  margin-left: 263px;
+  margin-top: 248px;
+}
+.creatividad{
+  width: 845px;
+  height: 300px;
+  top: 112px;
+  font-size: 100px;
+  font-weight: 600;
+  line-height: 100px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.imagenLogo {
+  position: relative;
+  width: 553px;
+  height: 575px;
+  margin-left: 1138px;
+  margin-bottom: 192px;
+  margin-top: -440px;
+}
+
+.imagenLogo .fondohuevo{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.imagenLogo .logo{
+  position: absolute;
+  width: 507px;
+  height: 461.63px;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 article {
   background-color: yellow;
   height: 100vh;

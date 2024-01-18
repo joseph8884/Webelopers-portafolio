@@ -1,5 +1,6 @@
 
 import Nav from "./Components/nav"
+import Header from "./Components/header"
 export default function Home() {
   return (
     <body>
@@ -7,7 +8,7 @@ export default function Home() {
         <Nav />
       </nav>
       <header>
-        <p>Esta es la parte de la oración</p>
+        <Header />
       </header>
       <article>
         <p>Esto es la parte de quienes somos</p>
