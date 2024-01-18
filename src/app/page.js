@@ -1,10 +1,10 @@
 
-
+import Nav from "./Components/nav"
 export default function Home() {
   return (
     <body>
       <nav>
-        <p>Aca es la barra de navegacion</p>
+        <Nav />
       </nav>
       <header>
         <p>Esta es la parte de la oración</p>
