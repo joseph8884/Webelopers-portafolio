@@ -1,0 +1,70 @@
+nav {
+  background-color: aqua;
+  height: 10vh;
+  display: grid;
+  place-content: center;
+}
+
+header {
+  background-color: brown;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+article {
+  background-color: yellow;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.cartas_servicios {
+  background-color: rgb(124, 124, 255);
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.quienes_somos_carrusel {
+  background-color: rgb(120, 241, 120);
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  background-color: grey;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.contacto {
+  background-color: red;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.Eggxcelentes {
+  background-color: purple;
+  height: 20vh;
+  display: grid;
+  place-content: center;
+}
+
+footer {
+  background-color: white;
+  height: 40vh;
+  display: grid;
+  place-content: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  font-size: 20px;
+}/*# sourceMappingURL=main.css.map */
