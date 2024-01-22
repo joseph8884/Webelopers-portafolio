@@ -2,14 +2,14 @@
 
 import Nav from "./Components/nav"
 import Header from "./Components/header"
+import Footer from "./Components/footer"
 export default function Home() {
   return (
     <body>
 
       <Nav />
-      <header>
-        <Header />
-      </header>
+      <Header />
+
       <article>
         <p>Esto es la parte de quienes somos</p>
       </article>
@@ -28,9 +28,7 @@ export default function Home() {
       <section className="Eggxcelentes">
         <p>Egg-selentes, frase</p>
       </section>
-      <footer>
-        <p>aca va el footer</p>
-      </footer>
+      <Footer />
     </body>
   )
 }

@@ -1,6 +1,13 @@
 footer{
     background-color: white;
     height: 40vh;
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+}
+img.fondoFooter {
+    position: absolute;
+    height: 40vh;
+    width: 100%;
+    margin-top: 20px;
 }

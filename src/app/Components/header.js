@@ -2,7 +2,6 @@ import Image from "next/image";
 const Header = () => {
     return (
         <header>
-            
                 <Image 
                     loading="lazy" 
                     src="/fondoheader.svg" 
