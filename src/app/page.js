@@ -5,9 +5,8 @@ import Header from "./Components/header"
 export default function Home() {
   return (
     <body>
-      <nav>
-        <Nav />
-      </nav>
+
+      <Nav />
       <header>
         <Header />
       </header>

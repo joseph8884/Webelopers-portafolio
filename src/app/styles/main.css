@@ -1,58 +1,60 @@
 nav {
-  width: 100%;
-  height: 126px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: flex-start; 
-  align-items: center;
-  padding: 4px 6px;
-  border-bottom: 1px solid #dcdcdc;
+  height: 15vh;
+  display: grid;
+  grid-template-areas: "logo" "links" "modo" "boton";
   background: #2B2C2F;
-  box-shadow: 6px 6px 12px 0px rgba(255, 255, 255, 0.25);
 }
-
-nav img {
-  width: 52px;
-  height: 50px;
-  flex-shrink: 0;
-  margin-right: 283px;
-  margin-left: 164px;
+nav div.nav {
+  display: grid;
+  margin: 0 5%;
+  grid-template: "logo links modo boton" 15vh/10% 60% 10% 188px;
 }
-nav .sol{
-  width: 48px;
-  height: 48px;
-  margin-right: 14px;
-  margin-left: 222px;
+nav div.nav img.logo {
+  grid-area: logo;
+  margin: 33%;
+  width: 5vh;
+  height: 5vh;
 }
-nav .ingles{
-  width: 41px;
-  height: 38px;
-  margin-left: 14px;
-  margin-right: 113px;
+nav div.nav div.links_nav {
+  grid-area: links;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
-
-nav a {
+nav div.nav div.links_nav a {
   text-decoration: none;
-  margin-right: 50px;
+  margin-right: 10%;
   color: white;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
 }
-
-nav button{
-  width: 188px;
+nav div.nav div.Modo_nav {
+  grid-area: modo;
+  margin: 33% 0;
+}
+nav div.nav div.Modo_nav .sol {
+  width: 4vh;
+  height: 4vh;
+}
+nav div.nav div.Modo_nav .ingles {
+  width: 4vh;
+  height: 4vh;
+  margin: 0 10px;
+}
+nav div.nav button {
+  grid-area: boton;
+  margin: 25% 0;
   height: 52px;
-  flex-shrink: 0;
-  margin-right: 100px;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 111.111% */
+  font-weight: 400; /* 111.111% */
 }
 
 header {
+  height: 100vh;
+  display: grid;
+  place-content: center;
   width: auto;
   margin: 0 auto;
   height: 961px;
@@ -61,32 +63,37 @@ header {
 .somosWebelopers {
   font-size: 1.25rem;
   font-weight: bold;
-
   max-width: 241px;
 }
-.webelopers{
+
+.webelopers {
   font-size: 32px;
   font-weight: bold;
   color: #9f7aea;
   line-height: 32px;
 }
+
 .fondoheader {
   position: absolute;
   height: 752px;
   width: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   top: 233px;
   right: 0;
   bottom: 0;
   left: 0;
 }
-header .oracion{
+
+header .oracion {
   display: flex;
   margin-left: 263px;
   margin-top: 248px;
 }
-.creatividad{
+
+.creatividad {
   width: 845px;
   height: 300px;
   top: 112px;
@@ -106,14 +113,14 @@ header .oracion{
   margin-top: -440px;
 }
 
-.imagenLogo .fondohuevo{
+.imagenLogo .fondohuevo {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
 }
 
-.imagenLogo .logo{
+.imagenLogo .logo {
   position: absolute;
   width: 507px;
   height: 461.63px;
@@ -122,6 +129,7 @@ header .oracion{
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 article {
   background-color: yellow;
   height: 100vh;
