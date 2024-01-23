@@ -172,19 +172,29 @@ main {
 }
 
 footer {
-  background-color: white;
-  height: 40vh;
-  display: flex;
-  justify-content: center;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-color: #2B2C2F;
+  height: 60vh;
+  display: grid;
+  grid-template-areas: "logo" "links" "Derechos" "redes";
 }
-
-img.fondoFooter {
-  position: absolute;
-  height: 40vh;
-  width: 100%;
-  margin-top: 20px;
+footer div.footer {
+  display: grid;
+  margin: 5% 10%;
+  grid-template: "logo links links" auto "derechos redes redes" auto/50% 25% auto;
+}
+footer div.footer div.logo {
+  grid-area: logo;
+}
+footer div.footer div.links {
+  grid-area: links;
+  display: flex;
+  flex-direction: column;
+}
+footer div.footer div.derechosReservados {
+  grid-area: derechos;
+}
+footer div.footer div.redes {
+  grid-area: redes;
 }
 
 * {
