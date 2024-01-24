@@ -1,6 +1,59 @@
-footer{
-    background-color: white;
-    height: 40vh;
+footer {
+    background-color: #2B2C2F;
+    height: 60vh;
     display: grid;
-    place-content: center;
+    grid-template-areas: 
+        "logo" 
+        "links"
+        "Derechos" 
+        "redes";
+    & div.footer{
+        display: grid;
+        margin: 5% 10%;
+        grid-template: 
+        "logo links vacio" 35vh
+        "derechos derechos redes" auto /
+        auto 33% 33%;
+        & div.logo{
+            grid-area: logo;
+            border-right: 2px solid #FFFFFF;
+            margin-bottom: 20px;
+            & img{
+                margin: 5% 15%;
+            }
+        }
+        & div.links_footer{
+            grid-area: links;
+            display: flex;
+            flex-direction: column;
+            border-right: 2px solid #FFFFFF;
+            margin-bottom: 20px;
+            & a {
+                text-decoration: none;
+                color: white;
+                margin: 3.5% 33%;
+                font-size: 24px;
+            }
+        }
+        & div.derechosReservados{
+            grid-area: derechos;
+            border-top: 2px solid #FFFFFF;
+            margin-top: 20px;
+            & p{
+                color: white;
+                margin: 50px 10px;
+                font-size: 20px;
+            }
+        }
+        & div.redes{
+            grid-area: redes;
+            margin-top: 20px;
+            border-top: 2px solid #FFFFFF;
+            & p{
+                color: white;
+                margin: 50px 0 0 30%;
+                font-size: 24px;
+            }
+        }
+    }
 }

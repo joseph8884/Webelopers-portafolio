@@ -1,6 +1,58 @@
 nav{
-    background-color: aqua;
-    height: 10vh;
+    height: 15vh;
     display: grid;
-    place-content: center;
+    grid-template-areas: 
+        "logo" 
+        "links"
+        "modo" 
+        "boton";
+    background: #2B2C2F;
+    & div.nav{
+        display: grid;
+        margin: 0 5%;
+        grid-template: 
+        "logo links modo boton" 15vh/
+        10% 60% 10% 188px;
+        & img.logo {
+            grid-area: logo;
+            margin: 33%;
+            width: 5vh;
+            height: 5vh;
+        }
+        & div.links_nav{
+            grid-area: links;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            & a {
+                text-decoration: none;
+                margin-right: 10%;
+                color: white;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+            }
+        }
+        & div.Modo_nav{
+            grid-area: modo;
+            margin: 33% 0;
+            & .sol{
+                width: 4vh;
+                height: 4vh;
+            }
+            & .ingles{
+                width: 4vh;
+                height: 4vh;
+                margin: 0 10px;
+            }
+        }
+        & button{
+            grid-area: boton;
+            margin: 25% 0;
+            height: 52px;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;/* 111.111% */
+        }
+    }
 }
