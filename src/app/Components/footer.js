@@ -9,8 +9,8 @@ const Footer = () => {
                     loading="lazy"
                     src="/HuevoFooter.svg" /* Ruta relativa al directorio public */
                     alt=""
-                    width={356}
-                    height={322} /* Puedes ajustar esto según tus necesidades */
+                    width={300}
+                    height={262} /* Puedes ajustar esto según tus necesidades */
                     />
                 </div>
                 <div className='links_footer'>
@@ -21,7 +21,7 @@ const Footer = () => {
                     <Link href="#section5">Contactanos</Link>
                 </div>
                 <div className="derechosReservados">
-                    <p>@2023  Egresados La fuente Tocancipa. All rights reserved.</p>
+                    <p>@2024 made by Webelopers. All rights reserved.</p>
                 </div>
                 <div className="redes">
                     <p>redes sociales</p>

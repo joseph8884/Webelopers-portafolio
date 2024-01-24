@@ -180,21 +180,48 @@ footer {
 footer div.footer {
   display: grid;
   margin: 5% 10%;
-  grid-template: "logo links links" auto "derechos redes redes" auto/50% 25% auto;
+  grid-template: "logo links vacio" 35vh "derechos derechos redes" auto/auto 33% 33%;
 }
 footer div.footer div.logo {
   grid-area: logo;
+  border-right: 2px solid #FFFFFF;
+  margin-bottom: 20px;
 }
-footer div.footer div.links {
+footer div.footer div.logo img {
+  margin: 5% 15%;
+}
+footer div.footer div.links_footer {
   grid-area: links;
   display: flex;
   flex-direction: column;
+  border-right: 2px solid #FFFFFF;
+  margin-bottom: 20px;
+}
+footer div.footer div.links_footer a {
+  text-decoration: none;
+  color: white;
+  margin: 3.5% 33%;
+  font-size: 24px;
 }
 footer div.footer div.derechosReservados {
   grid-area: derechos;
+  border-top: 2px solid #FFFFFF;
+  margin-top: 20px;
+}
+footer div.footer div.derechosReservados p {
+  color: white;
+  margin: 50px 10px;
+  font-size: 20px;
 }
 footer div.footer div.redes {
   grid-area: redes;
+  margin-top: 20px;
+  border-top: 2px solid #FFFFFF;
+}
+footer div.footer div.redes p {
+  color: white;
+  margin: 50px 0 0 30%;
+  font-size: 24px;
 }
 
 * {
