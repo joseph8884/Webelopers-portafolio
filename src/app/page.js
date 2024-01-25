@@ -1,7 +1,6 @@
-
-
 import Nav from "./Components/nav"
 import Header from "./Components/header"
+import Eggxcelentes from "./Components/eggxcelentes"
 import Footer from "./Components/footer"
 export default function Home() {
   return (
@@ -25,9 +24,8 @@ export default function Home() {
       <section className="contacto">
         <p>formulario de contacto</p>
       </section>
-      <section className="Eggxcelentes">
-        <p>Egg-selentes, frase</p>
-      </section>
+      
+      <Eggxcelentes/>
       <Footer />
     </body>
   )
