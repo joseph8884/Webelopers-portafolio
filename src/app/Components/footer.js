@@ -20,6 +20,12 @@ const Footer = () => {
                     <Link href="#section4">Proyectos</Link>
                     <Link href="#section5">Contactanos</Link>
                 </div>
+                <div className="cotizacion_footer">
+                    <h3>¿Quieres trabajar con nosotros? 
+                    Diligencia este formulario para conocernos mejor 
+                    </h3>
+                    <button>Cotiza con nosotros!</button>
+                </div>
                 <div className="derechosReservados">
                     <p>@2024 made by Webelopers. All rights reserved.</p>
                 </div>
