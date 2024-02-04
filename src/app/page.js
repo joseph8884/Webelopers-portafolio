@@ -3,6 +3,7 @@
 import Nav from "./Components/nav"
 import Header from "./Components/header"
 import Footer from "./Components/footer"
+import Cards from "./Components/cards"
 export default function Home() {
   return (
     <body>
@@ -14,7 +15,7 @@ export default function Home() {
         <p>Esto es la parte de quienes somos</p>
       </article>
       <section className="cartas_servicios">
-        <p>cartas de servicios y que hacemos</p>
+        <Cards />
       </section>
       <section className="quienes_somos_carrusel">
         <p>Quienes somos, animacion entre carrusel</p>
