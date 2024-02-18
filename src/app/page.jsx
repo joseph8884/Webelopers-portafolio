@@ -4,6 +4,8 @@ import Nav from "./Components/nav"
 import Header from "./Components/header"
 import Footer from "./Components/footer"
 import Cards from "./Components/cards"
+import Gio from "./Components/Gio"
+
 export default function Home() {
   return (
     <body>
@@ -17,9 +19,7 @@ export default function Home() {
       <section className="cartas_servicios">
         <Cards />
       </section>
-      <section className="quienes_somos_carrusel">
-        <p>Quienes somos, animacion entre carrusel</p>
-      </section>
+      <Gio/>
       <main>
         <p>portafolio de nuestros proyectos</p>
       </main>
