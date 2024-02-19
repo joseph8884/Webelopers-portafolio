@@ -20,7 +20,7 @@ const Cards = () => {
                         <h2>Responsive design</h2>
                     </div>
                     <div className='back1'>
-                    <p>dsad</p>
+                        <p>dsad</p>
                     </div>
                 </div>
                 <div className='carta'>

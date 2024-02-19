@@ -34,9 +34,18 @@
             border-radius: 50px;
             overflow: hidden;
             transform-style: preserve-3d;
-            
             transition: transform 1000ms;
-
+            & div {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                position: absolute;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
             & img {
                 width: 600px;
                 height: 45vh;
@@ -45,69 +54,32 @@
             & h2 {
                 font-size: 30px;
             }
-            & div.carta1-front, div.back1{
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-                transform: rotateY(180deg);
-            }
             & div.carta1-front {
                 grid-area: carta1;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                position: absolute;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
+                transform: perspective(500px) rotateY(0deg);
             }
 
             & div.carta2-front {
                 grid-area: carta2;
-                position: absolute;
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
             }
 
             & div.carta3-front {
                 grid-area: carta3;
-                position: absolute;
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
             }
-
-            & div.back1{
-                background-color: aqua;
-                
-            }
-            & div.back2,
+            & div.back1, div.back2,
             div.back3 {
-                background-color: aqua;
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-                transform: rotateY(180deg);
+                background-color: rgb(255, 0, 0);
+                transform: perspective(500px) rotateY(180deg);
             }
 
         }
 
-        & div.carta:hover {
-            transform: rotateY(180deg);
+        & div.carta:hover .front{
+            transform: perspective(500px) rotateY(180deg);
+            
+        }
+        & div.carta:hover .back{
+            transform: perspective(500px) rotateY(360deg);
         }
         
 
