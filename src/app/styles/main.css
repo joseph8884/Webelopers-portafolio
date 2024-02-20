@@ -168,8 +168,6 @@ article {
 }
 .cartas_servicios div.cartas-container .flip-card .flip-card-inner {
   position: relative;
-  width: 100%;
-  text-align: center;
   transition: transform 1000ms;
   transform-style: preserve-3d;
 }
@@ -188,7 +186,7 @@ article {
 .cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front1 img,
 .cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front2 img,
 .cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front3 img {
-  width: 50vw;
+  width: 25vw;
   height: 45vh;
 }
 .cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front1 h2,
@@ -201,9 +199,14 @@ article {
 .cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-back3 {
   background-color: #2980b9;
   color: white;
-  height: auto;
+  height: 50vh;
   transform: rotateY(180deg);
   border-radius: 50px;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front1,
 .cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-back1,
