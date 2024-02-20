@@ -1,88 +1,92 @@
 .cartas_servicios {
-    background-color: rgb(124, 124, 255);
-    height: 100vh;
-    width: 100%;
-    display: inline-block;
-    grid-template-areas:
-        "carta1" "carta2" "carta3";
+  background-color: rgb(124, 124, 255);
+  height: 100vh;
+  width: 100%;
+  display: inline-block;
+  grid-template-areas: "carta1" "carta2" "carta3";
 
-    & h1 {
-        height: min-content;
-        font-size: 36px;
+  & h1 {
+    height: min-content;
+    font-size: 36px;
+    text-align: center;
+    line-height: 40px;
+    margin: 5% 0 70px 0;
+
+    & b {
+      font-size: 65px;
+    }
+  }
+
+  & div.cartas-container {
+    display: grid;
+    grid-template:
+      "carta1 carta2 carta3" 50vh/
+      auto auto auto;
+    gap: 5%;
+    margin: 0 5%;
+    perspective: 1000px;
+
+    & .flip-card {
+      background-color: transparent;
+      width: 100%;
+      perspective: 1000px;
+      & .flip-card-inner {
+        position: relative;
+        width: 100%;
         text-align: center;
-        line-height: 40px;
-        margin: 5% 0 70px 0;
-
-        & b {
-            font-size: 65px;
+        transition: transform 1000ms;
+        transform-style: preserve-3d;
+        & .flip-card-front1,
+        .flip-card-front2,
+        .flip-card-front3 {
+          background-color: #bbb;
+          color: black;
+          border-radius: 50px;
+          display: flex;
+          position: absolute;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          & img {
+            width: 50vw;
+            height: 45vh;
+          }
+          & h2 {
+            font-size: 30px;
+          }
         }
+        & .flip-card-back1,
+        .flip-card-back2,
+        .flip-card-back3 {
+          background-color: #2980b9;
+          color: white;
+          height: auto;
+          transform: rotateY(180deg);
+          border-radius: 50px;
+        }
+        & .flip-card-front1,
+        .flip-card-back1,
+        .flip-card-front2,
+        .flip-card-back2,
+        .flip-card-front3,
+        .flip-card-back3 {
+          position: absolute;
+          width: 100%;
+          backface-visibility: hidden;
+        }
+        & .flip-card-front1 {
+          grid-area: carta1;
+        }
+        & .flip-card-front2 {
+          grid-area: carta2;
+        }
+        & .flip-card-front3 {
+          grid-area: carta3;
+        }
+      }
     }
-
-    & div.cartas-container {
-        display: grid;
-        grid-template:
-            "carta1 carta2 carta3" auto/
-            auto auto auto;
-        gap: 5%;
-        margin: 0 5%;
-        perspective: 1000px;
-
-        & div.carta {
-            position: relative;
-            background-color: #fff;
-            height: 550px;
-            border-radius: 50px;
-            overflow: hidden;
-            transform-style: preserve-3d;
-            transition: transform 1000ms;
-            & div {
-                height: 100%;
-                width: 100%;
-                display: flex;
-                position: absolute;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-            }
-            & img {
-                width: 600px;
-                height: 45vh;
-            }
-
-            & h2 {
-                font-size: 30px;
-            }
-            & div.carta1-front {
-                grid-area: carta1;
-                transform: perspective(500px) rotateY(0deg);
-            }
-
-            & div.carta2-front {
-                grid-area: carta2;
-            }
-
-            & div.carta3-front {
-                grid-area: carta3;
-            }
-            & div.back1, div.back2,
-            div.back3 {
-                background-color: rgb(255, 0, 0);
-                transform: perspective(500px) rotateY(180deg);
-            }
-
-        }
-
-        & div.carta:hover .front{
-            transform: perspective(500px) rotateY(180deg);
-            
-        }
-        & div.carta:hover .back{
-            transform: perspective(500px) rotateY(360deg);
-        }
-        
-
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
     }
-
+  }
 }

@@ -156,57 +156,76 @@ article {
 }
 .cartas_servicios div.cartas-container {
   display: grid;
-  grid-template: "carta1 carta2 carta3" auto/auto auto auto;
+  grid-template: "carta1 carta2 carta3" 50vh/auto auto auto;
   gap: 5%;
   margin: 0 5%;
   perspective: 1000px;
 }
-.cartas_servicios div.cartas-container div.carta {
-  position: relative;
-  background-color: #fff;
-  height: 550px;
-  border-radius: 50px;
-  overflow: hidden;
-  transform-style: preserve-3d;
-  transition: transform 1000ms;
-}
-.cartas_servicios div.cartas-container div.carta div {
-  height: 100%;
+.cartas_servicios div.cartas-container .flip-card {
+  background-color: transparent;
   width: 100%;
+  perspective: 1000px;
+}
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transition: transform 1000ms;
+  transform-style: preserve-3d;
+}
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front1,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front2,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front3 {
+  background-color: #bbb;
+  color: black;
+  border-radius: 50px;
   display: flex;
   position: absolute;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  backface-visibility: hidden;
 }
-.cartas_servicios div.cartas-container div.carta img {
-  width: 600px;
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front1 img,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front2 img,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front3 img {
+  width: 50vw;
   height: 45vh;
 }
-.cartas_servicios div.cartas-container div.carta h2 {
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front1 h2,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front2 h2,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front3 h2 {
   font-size: 30px;
 }
-.cartas_servicios div.cartas-container div.carta div.carta1-front {
-  grid-area: carta1;
-  transform: perspective(500px) rotateY(0deg);
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-back1,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-back2,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-back3 {
+  background-color: #2980b9;
+  color: white;
+  height: auto;
+  transform: rotateY(180deg);
+  border-radius: 50px;
 }
-.cartas_servicios div.cartas-container div.carta div.carta2-front {
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front1,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-back1,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front2,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-back2,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front3,
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-back3 {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front1 {
+  grid-area: carta1;
+}
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front2 {
   grid-area: carta2;
 }
-.cartas_servicios div.cartas-container div.carta div.carta3-front {
+.cartas_servicios div.cartas-container .flip-card .flip-card-inner .flip-card-front3 {
   grid-area: carta3;
 }
-.cartas_servicios div.cartas-container div.carta div.back1, .cartas_servicios div.cartas-container div.carta div.back2,
-.cartas_servicios div.cartas-container div.carta div.back3 {
-  background-color: rgb(255, 0, 0);
-  transform: perspective(500px) rotateY(180deg);
-}
-.cartas_servicios div.cartas-container div.carta:hover .front {
-  transform: perspective(500px) rotateY(180deg);
-}
-.cartas_servicios div.cartas-container div.carta:hover .back {
-  transform: perspective(500px) rotateY(360deg);
+.cartas_servicios div.cartas-container .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
 .quienes_somos_carrusel {
