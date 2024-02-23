@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 nav {
   height: 15vh;
   display: grid;
@@ -139,8 +143,95 @@ article {
 .cartas_servicios {
   background-color: rgb(124, 124, 255);
   height: 100vh;
+  width: 100%;
+  display: inline-block;
+  grid-template-areas: "carta1" "carta2" "carta3";
+}
+.cartas_servicios h1 {
+  height: -moz-min-content;
+  height: min-content;
+  font-size: 36px;
+  text-align: center;
+  line-height: 40px;
+  margin: 5% 0 70px 0;
+}
+.cartas_servicios h1 b {
+  font-size: 65px;
+}
+.cartas_servicios div.cartas-container {
   display: grid;
-  place-content: center;
+  grid-template: "carta1 carta2 carta3" auto/auto auto auto;
+  gap: 5%;
+  margin: 0 5%;
+  perspective: 1000px;
+}
+.cartas_servicios div.cartas-container div.carta {
+  position: relative;
+  background-color: #fff;
+  height: 550px;
+  border-radius: 50px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 1000ms;
+}
+.cartas_servicios div.cartas-container div.carta img {
+  width: 600px;
+  height: 45vh;
+}
+.cartas_servicios div.cartas-container div.carta h2 {
+  font-size: 30px;
+}
+.cartas_servicios div.cartas-container div.carta div.carta1-front, .cartas_servicios div.cartas-container div.carta div.back1 {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+.cartas_servicios div.cartas-container div.carta div.carta1-front {
+  grid-area: carta1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.cartas_servicios div.cartas-container div.carta div.carta2-front {
+  grid-area: carta2;
+  position: absolute;
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  backface-visibility: hidden;
+}
+.cartas_servicios div.cartas-container div.carta div.carta3-front {
+  grid-area: carta3;
+  position: absolute;
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.cartas_servicios div.cartas-container div.carta div.back1 {
+  background-color: aqua;
+}
+.cartas_servicios div.cartas-container div.carta div.back2,
+.cartas_servicios div.cartas-container div.carta div.back3 {
+  background-color: aqua;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+.cartas_servicios div.cartas-container div.carta:hover {
+  transform: rotateY(180deg);
 }
 
 .quienes_somos_carrusel {
@@ -196,7 +287,7 @@ footer {
 footer div.footer {
   display: grid;
   margin: 5% 10%;
-  grid-template: "logo links vacio" 35vh "derechos derechos redes" auto/auto 33% 33%;
+  grid-template: "logo links cotizacionF" 35vh "derechos derechos redes" auto/auto 33% 33%;
 }
 footer div.footer div.logo {
   grid-area: logo;
@@ -218,6 +309,21 @@ footer div.footer div.links_footer a {
   color: white;
   margin: 3.5% 33%;
   font-size: 24px;
+}
+footer div.footer div.cotizacion_footer {
+  grid-area: cotizacionF;
+}
+footer div.footer div.cotizacion_footer h3 {
+  margin: 3.5% 20%;
+  color: white;
+  font-size: 25px;
+}
+footer div.footer div.cotizacion_footer button {
+  margin: 3.5% 20%;
+  height: auto;
+  font-size: 22px;
+  padding: 15px 25px;
+  font-style: normal;
 }
 footer div.footer div.derechosReservados {
   grid-area: derechos;
