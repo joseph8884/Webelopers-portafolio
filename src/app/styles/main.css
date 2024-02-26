@@ -367,10 +367,26 @@ b {
 }
 
 .Eggxcelentes {
-  background-color: purple;
-  height: 20vh;
   display: grid;
+  grid-template-columns: 40% 60%;
   place-content: center;
+  margin: 0 10vw;
+  height: 50vh;
+}
+
+.titulo {
+  grid-column: 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.texto {
+  grid-column: 2;
+  font-family: "Sans-serif";
+  font-size: 28px;
 }
 
 footer {
@@ -382,7 +398,7 @@ footer {
 footer div.footer {
   display: grid;
   margin: 5% 10%;
-  grid-template: "logo links cotizacionF" 35vh "derechos derechos redes" auto/auto 33% 33%;
+  grid-template: "logo links vacio" 35vh "derechos derechos redes" auto/auto 33% 33%;
 }
 footer div.footer div.logo {
   grid-area: logo;
@@ -404,21 +420,6 @@ footer div.footer div.links_footer a {
   color: white;
   margin: 3.5% 33%;
   font-size: 24px;
-}
-footer div.footer div.cotizacion_footer {
-  grid-area: cotizacionF;
-}
-footer div.footer div.cotizacion_footer h3 {
-  margin: 3.5% 20%;
-  color: white;
-  font-size: 25px;
-}
-footer div.footer div.cotizacion_footer button {
-  margin: 3.5% 20%;
-  height: auto;
-  font-size: 22px;
-  padding: 15px 25px;
-  font-style: normal;
 }
 footer div.footer div.derechosReservados {
   grid-area: derechos;
