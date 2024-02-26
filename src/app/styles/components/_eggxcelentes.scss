@@ -1,6 +1,20 @@
-.Eggxcelentes{
-    background-color: purple;
-    height: 20vh;
-    display: grid;
-    place-content: center;
+.Eggxcelentes {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  place-content: center;
+  margin: 0 10vw;
+  height: 50vh;
+}
+.titulo {
+  grid-column: 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+}
+.texto {
+  grid-column: 2;
+  font-family: "Sans-serif";
+  font-size: 28px;
 }
