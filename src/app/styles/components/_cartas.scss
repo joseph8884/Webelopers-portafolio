@@ -1,116 +1,111 @@
 .cartas_servicios {
-    background-color: rgb(124, 124, 255);
-    height: 100vh;
-    width: 100%;
-    display: inline-block;
-    grid-template-areas:
-        "carta1" "carta2" "carta3";
+  background-color: rgb(124, 124, 255);
+  height: 100vh;
+  width: 100%;
+  display: inline-block;
+  grid-template-areas: "carta1" "carta2" "carta3";
 
-    & h1 {
-        height: min-content;
-        font-size: 36px;
-        text-align: center;
-        line-height: 40px;
-        margin: 5% 0 70px 0;
+  & h1 {
+    height: min-content;
+    font-size: 36px;
+    text-align: center;
+    line-height: 40px;
+    margin: 5% 0 70px 0;
 
-        & b {
-            font-size: 65px;
-        }
+    & b {
+      font-size: 65px;
+    }
+  }
+
+  & div.cartas-container {
+    display: grid;
+    grid-template:
+      "carta1 carta2 carta3" auto/
+      auto auto auto;
+    gap: 5%;
+    margin: 0 5%;
+    perspective: 1000px;
+
+    & div.carta {
+      position: relative;
+      background-color: #fff;
+      height: 550px;
+      border-radius: 50px;
+      overflow: hidden;
+      transform-style: preserve-3d;
+
+      transition: transform 1000ms;
+
+      & img {
+        width: 600px;
+        height: 45vh;
+      }
+
+      & h2 {
+        font-size: 30px;
+      }
+      & div.carta1-front,
+      div.back1 {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+      }
+      & div.carta1-front {
+        grid-area: carta1;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      & div.carta2-front {
+        grid-area: carta2;
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      & div.carta3-front {
+        grid-area: carta3;
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      & div.back1 {
+        background-color: aqua;
+      }
+      & div.back2,
+      div.back3 {
+        background-color: aqua;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+      }
     }
 
-    & div.cartas-container {
-        display: grid;
-        grid-template:
-            "carta1 carta2 carta3" auto/
-            auto auto auto;
-        gap: 5%;
-        margin: 0 5%;
-        perspective: 1000px;
-
-        & div.carta {
-            position: relative;
-            background-color: #fff;
-            height: 550px;
-            border-radius: 50px;
-            overflow: hidden;
-            transform-style: preserve-3d;
-            
-            transition: transform 1000ms;
-
-            & img {
-                width: 600px;
-                height: 45vh;
-            }
-
-            & h2 {
-                font-size: 30px;
-            }
-            & div.carta1-front, div.back1{
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-                transform: rotateY(180deg);
-            }
-            & div.carta1-front {
-                grid-area: carta1;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                position: absolute;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-            }
-
-            & div.carta2-front {
-                grid-area: carta2;
-                position: absolute;
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-            }
-
-            & div.carta3-front {
-                grid-area: carta3;
-                position: absolute;
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-            }
-
-            & div.back1{
-                background-color: aqua;
-                
-            }
-            & div.back2,
-            div.back3 {
-                background-color: aqua;
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-                transform: rotateY(180deg);
-            }
-
-        }
-
-        & div.carta:hover {
-            transform: rotateY(180deg);
-        }
-        
-
+    & div.carta:hover {
+      transform: rotateY(180deg);
     }
-
+  }
 }
