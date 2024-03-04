@@ -1,25 +1,23 @@
-
-
-import Nav from "./Components/nav"
-import Header from "./Components/header"
-import Footer from "./Components/footer"
-import Cards from "./Components/cards"
-import Gio from "./Components/Gio"
+import Nav from "./Components/nav";
+import Header from "./Components/header";
+import Footer from "./Components/footer";
+import Cards from "./Components/cards";
+import Gio from "./Components/Gio";
+import QuienesSomos from "./Components/quienesSomos";
 
 export default function Home() {
   return (
     <body>
-
       <Nav />
       <Header />
 
       <article>
-        <p>Esto es la parte de quienes somos</p>
+        <QuienesSomos />
       </article>
       <section className="cartas_servicios">
         <Cards />
       </section>
-      <Gio/>
+      <Gio />
       <main>
         <p>portafolio de nuestros proyectos</p>
       </main>
@@ -31,5 +29,5 @@ export default function Home() {
       </section>
       <Footer />
     </body>
-  )
+  );
 }

@@ -70,3 +70,51 @@
     font-weight: 400;
   }
 }
+
+.parent2 {
+  background-color: #eff0f4;
+  .cardGrid2 {
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    & div {
+      height: 100vh;
+    }
+    & .leftQuienesSomos {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2em;
+      & h5 {
+        font-size: 3em;
+        padding: 1em;
+      }
+      & p {
+        font-size: 0.8em;
+        padding: 0 1em;
+        text-align: justify;
+      }
+      & button {
+        background-color: #2eb1ed;
+        color: white;
+        padding: 0.5em 1em;
+        -webkit-box-shadow: 0px 10px 55px 3px rgba(114, 45, 218, 0.83);
+        -moz-box-shadow: 0px 10px 55px 3px rgba(114, 45, 218, 0.83);
+        box-shadow: 0px 10px 55px 3px rgba(114, 45, 218, 0.83);
+      }
+    }
+    & .imagenQuienesSomos {
+      background-image: url(../../../../public/compuCode.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-width: 50%;
+      height: 70vh;
+    }
+    & .changeCard {
+      transform: translateY(50%);
+    }
+  }
+}
