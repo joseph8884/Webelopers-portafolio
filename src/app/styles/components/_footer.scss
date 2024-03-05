@@ -11,7 +11,7 @@ footer {
         display: grid;
         margin: 5% 10%;
         grid-template: 
-        "logo links cotizacionF" 35vh
+        "logo links vacio" 35vh
         "derechos derechos redes" auto /
         auto 33% 33%;
         & div.logo{
@@ -33,21 +33,6 @@ footer {
                 color: white;
                 margin: 3.5% 33%;
                 font-size: 24px;
-            }
-        }
-        & div.cotizacion_footer{
-            grid-area: cotizacionF;
-            & h3{
-                margin: 3.5% 20%;
-                color: white;
-                font-size: 25px;
-            }
-            & button{
-                margin: 3.5% 20%;
-                height: auto;
-                font-size: 22px;
-                padding: 15px 25px;
-                font-style: normal;
             }
         }
         & div.derechosReservados{
