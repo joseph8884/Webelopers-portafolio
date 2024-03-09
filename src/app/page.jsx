@@ -5,6 +5,7 @@ import Footer from "./Components/footer"
 import Cards from "./Components/cards"
 import Gio from "./Components/Gio"
 import Portafolio from "./Components/Portafolio"
+import Formulario from "./Components/Formulario"
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
         <Portafolio/>
       </section>
       <section className="contacto">
-        <p>formulario de contacto</p>
+        <Formulario/>
       </section>
       
       <Eggxcelentes/>
