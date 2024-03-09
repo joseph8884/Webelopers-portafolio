@@ -3,9 +3,16 @@ import React from 'react';
 
 const Formulario = () => {
     return (
+        
         <section className="formulario">
+            <div className='contenido'>
+            <h1>¡Pongámonos en contacto!</h1>
+            <h2>Estamos seguros de que juntos encontraremos soluciones integrales a tus problemas tecnológicos</h2>
+            <img src="Vector.png" alt="Foto huevito" />
+            </div>
+            
             <form action="">
-                <h2 className="form_title">Cotiza ahora</h2>
+                <h2 className="form_title">Envíanos tu mensaje</h2>
                 <div className="input">
 
                     <div className='form_group'>

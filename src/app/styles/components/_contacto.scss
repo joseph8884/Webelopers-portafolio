@@ -1,38 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 .contacto{
-    height: 100vh;
-    display: grid;
-    place-content: center;
+    width: 100%;
+    height: 1080px;
+    display: flex;
     font-family: 'Poppins', sans-serif;
-    background-color: #402e59;
-    opacity: 0.9;
-    background-image:  radial-gradient(#ffffff 0.5px, transparent 0.5px), radial-gradient(#ffffff 0.5px, #402e59 0.5px);
-    background-size: 20px 20px;
-    background-position: 0 0,10px 10px;
-
+    border-radius: 25%;
+    
+    
+    .formulario{
+        background-color: #402e59;
+        opacity: 0.9;
+        background-image: radial-gradient(#ffffff 0.5px, transparent 0.5px), radial-gradient(#ffffff 0.5px, #402e59 0.5px);
+        background-size: 20px 20px;
+        background-position: 0 0, 10px 10px;
+        height: 920px;
+        width: 1595px;
+    }
+    .contenido {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% - 823px);
+        height: 800px;
+        h2 {
+            font-size: 28px;
+            text-align: left;
+            margin-left: 60px;
+            color: #ffffff;
+            font-weight: 300;
+        }
+        h1{
+            font-size: 77px;
+            line-height: 143%;
+            font-weight: 700;
+            color: #ffffff;
+        }
+    }
 
     form{
         background-color: #ffffff;
-        margin: auto;
         width: 90%;
         width: 823px;
+        height: 920px;
         max-width: 823px;
         padding: 4.5em 3em;
         border-radius: 10px;
         box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
         text-align: center;
-        justify-self: end;        
+             
+        margin-left: 1550-823px;
+        margin-top: -800px;
         
     }
     .form_title{
         margin-bottom: .5em;
         font-size: 2rem;
-    }
-    .formulario{
-
-        display: grid;
-        gap: 2.5em;
-
     }
     .form_link{
         font-weight: 400;
