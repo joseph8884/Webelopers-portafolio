@@ -3,7 +3,7 @@ import React from 'react';
 
 const Formulario = () => {
     return (
-        
+            
         <section className="formulario">
             <div className='contenido'>
             <h1>¡Pongámonos en contacto!</h1>
@@ -20,21 +20,25 @@ const Formulario = () => {
                     <label htmlFor="name" className='form_label'>Nombre Completo:</label>
                     <span className='form_line'></span>
                     </div>
+                    <br />
+
 
                     <div className='form_group'>
                     <input type="text" id="email" className='form_input' placeholder=" " />
                     <label htmlFor="email" className='form_label'>Email:</label>
                     <span className='form_line'></span>
                     </div>
+                    <br />
 
                     <div className='form_group'>
                     <input type="text" id="telefono" className='form_input' placeholder=" " />
                     <label htmlFor="telefono" className='form_label'>Telefono:</label>
                     <span className='form_line'></span>
                     </div>
-                    
+                    <br />
+
                     <div className='form_group'>
-                    <input type="text" id="msg" className='form_input' placeholder=" " />
+                    <textarea id="msg" className='form_input' placeholder=" " style={{ height: '300px', resize:"none" }} />
                     <label htmlFor="msg" className='form_label'>Tu mensaje:</label>
                     <span className='form_line'></span>
                     </div>

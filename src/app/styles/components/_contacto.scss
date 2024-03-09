@@ -97,7 +97,16 @@
        padding: .8em 0;
        border: none;
        border-radius: .5em;
-    }
+       padding-top: 20px; // Ajusta la altura del botón aquí
+       width: 350px;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); // Agrega sombra oscura
+        transition: background-color 0.3s; // Agrega transición para el cambio de color
+
+        &:hover {
+            background-color: green; // Cambia el color de fondo al pasar el mouse
+            cursor: pointer; // Cambia el cursor a la forma de selección
+        }
+}
     .form_line{
         position: absolute;
         bottom: 0;
