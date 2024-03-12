@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 nav {
   height: 15vh;
   display: grid;
@@ -49,6 +50,84 @@ nav div.nav button {
   font-size: 18px;
   font-style: normal;
   font-weight: 400; /* 111.111% */
+}
+
+header {
+  height: 961px;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.somosWebelopers {
+  font-size: 1.25rem;
+  font-weight: bold;
+  max-width: 241px;
+}
+
+.webelopers {
+  font-size: 40px;
+  font-weight: bold;
+  color: #9f7aea;
+  line-height: 32px;
+}
+
+.fondoheader {
+  position: absolute;
+  height: 752px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  top: 233px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+header .oracion {
+  display: flex;
+  margin-left: 263px;
+  margin-top: 248px;
+}
+
+.creatividad {
+  width: 845px;
+  height: 300px;
+  top: 112px;
+  font-size: 100px;
+  font-weight: 600;
+  line-height: 100px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.imagenLogo {
+  position: relative;
+  width: 553px;
+  height: 575px;
+  margin-left: 1138px;
+  margin-bottom: 192px;
+  margin-top: -440px;
+}
+
+.imagenLogo .fondohuevo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.imagenLogo .logo {
+  position: absolute;
+  width: 507px;
+  height: 461.63px;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 article {
@@ -282,7 +361,140 @@ b {
   font-size: 65px;
 }
 
+.contacto {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  font-family: "Poppins", sans-serif;
+  grid-template-areas: "contenido" "formulario";
+}
+.contacto .formulario {
+  background-color: #402e59;
+  display: grid;
+  opacity: 0.9;
+  border-radius: 5%;
+  margin: 0 5% 0 5%;
+  background-image: radial-gradient(#ffffff 0.5px, transparent 0.5px), radial-gradient(#ffffff 0.5px, #402e59 0.5px);
+  grid-template: "contenido formulario" auto/50% 50%;
+}
+.contacto .contenido {
+  grid-area: contenido;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto .contenido h2 {
+  font-size: 28px;
+  text-align: left;
+  margin-left: 60px;
+  color: #ffffff;
+  font-weight: 300;
+}
+.contacto .contenido h1 {
+  font-size: 77px;
+  line-height: 143%;
+  font-weight: 700;
+  color: #ffffff;
+}
+.contacto form {
+  grid-area: formulario;
+  background-color: #ffffff;
+  padding: 4.5em 3em;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.contacto .form_title {
+  margin-bottom: 0.5em;
+  font-size: 2rem;
+}
+.contacto .form_link {
+  font-weight: 400;
+  color: black;
+}
+.contacto .form_group {
+  position: relative;
+  --color: #5757577e;
+}
+.contacto .form_input {
+  width: 100%;
+  background: none;
+  color: #706c6c;
+  font-size: 1rem;
+  padding: 0.6em 0.3em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color);
+  font-family: "Poppins", sans-serif;
+}
+.contacto .form_input:not(:-moz-placeholder-shown) + .form_label {
+  transform: translateY(-12px) scale(0.7);
+  transform-origin: left top;
+  color: #3866f2;
+}
+.contacto .form_input:focus + .form_label, .contacto .form_input:not(:placeholder-shown) + .form_label {
+  transform: translateY(-12px) scale(0.7);
+  transform-origin: left top;
+  color: #3866f2;
+}
+.contacto .form_label {
+  color: var(--color);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translateY(10px);
+  transition: transform 0.5s, color 0.3s;
+}
+.contacto .form_submit {
+  margin-top: 10%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0.8em 0;
+  border: none;
+  border-radius: 0.5em;
+  padding-top: 20px;
+  width: 350px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+.contacto .form_submit:hover {
+  background-color: green;
+  cursor: pointer;
+}
+.contacto .form_line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #3866f2;
+  transition: transform 0.4s;
+}
+.contacto .form_input:not(:-moz-placeholder-shown) ~ .form_line {
+  transform: scale(1);
+}
+.contacto .form_input:focus ~ .form_line,
+.contacto .form_input:not(:placeholder-shown) ~ .form_line {
+  transform: scale(1);
+}
+.contacto .form_input:not(:-moz-placeholder-shown) {
+  color: #4d4646;
+}
+.contacto .form_input:not(:placeholder-shown) {
+  color: #4d4646;
+}
+@media (max-width: 425px) {
+  .contacto .form_title {
+    font-size: 1.8rem;
+  }
+}
 
+.form_paragraph {
+  font-weight: 300;
+}
 
 .Eggxcelentes {
   display: grid;
