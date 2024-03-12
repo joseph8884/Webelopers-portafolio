@@ -364,7 +364,6 @@ b {
 .contacto {
   width: 100%;
   height: 100vh;
-  display: grid;
   font-family: "Poppins", sans-serif;
   grid-template-areas: "contenido" "formulario";
 }
@@ -375,7 +374,7 @@ b {
   border-radius: 5%;
   margin: 0 5% 0 5%;
   background-image: radial-gradient(#ffffff 0.5px, transparent 0.5px), radial-gradient(#ffffff 0.5px, #402e59 0.5px);
-  grid-template: "contenido formulario" auto/50% 50%;
+  grid-template: "contenido formulario" 100vh/50% 50%;
 }
 .contacto .contenido {
   grid-area: contenido;
@@ -385,29 +384,31 @@ b {
   align-items: center;
 }
 .contacto .contenido h2 {
-  font-size: 28px;
+  font-size: 2vh;
   text-align: left;
-  margin-left: 60px;
+  margin-left: 15%;
   color: #ffffff;
   font-weight: 300;
 }
 .contacto .contenido h1 {
-  font-size: 77px;
+  font-size: 5vh;
   line-height: 143%;
   font-weight: 700;
   color: #ffffff;
+  width: 100%;
 }
 .contacto form {
   grid-area: formulario;
   background-color: #ffffff;
-  padding: 4.5em 3em;
+  height: 100vh;
+  padding: 5vh 3vw;
   border-radius: 10px;
   box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 .contacto .form_title {
-  margin-bottom: 0.5em;
-  font-size: 2rem;
+  margin-bottom: 1vh;
+  font-size: 5vh;
 }
 .contacto .form_link {
   font-weight: 400;
@@ -421,7 +422,7 @@ b {
   width: 100%;
   background: none;
   color: #706c6c;
-  font-size: 1rem;
+  font-size: 2vh;
   padding: 0.6em 0.3em;
   border: none;
   outline: none;
@@ -439,6 +440,7 @@ b {
   color: #3866f2;
 }
 .contacto .form_label {
+  font-size: 2vh;
   color: var(--color);
   cursor: pointer;
   position: absolute;
@@ -448,14 +450,14 @@ b {
   transition: transform 0.5s, color 0.3s;
 }
 .contacto .form_submit {
-  margin-top: 10%;
+  margin-top: 5%;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 2vh;
   padding: 0.8em 0;
   border: none;
   border-radius: 0.5em;
-  padding-top: 20px;
+  padding-top: 2vh;
   width: 350px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s;
